@@ -3,7 +3,7 @@ import { SafeAreaView, StatusBar, Text } from "react-native";
 import FirstScreen from "./Components/FirstScreen/FirstScreen.jsx";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import OnBoarding from "./Components/OnBoarding/OnBoarding.jsx";
+import OnBoardingFlow from "./Components/OnBoarding/OnBoardingFlow.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +20,14 @@ export default function App() {
             name="FirstScreen"
             component={FirstScreen}
           />
-          <Stack.Screen name="OnBoarding" component={OnBoarding} />
+          <Stack.Screen
+            options={{
+              title: "",
+              headerShown: false,
+            }}
+            name="OnBoardingFlow"
+            component={OnBoardingFlow}
+          />
         </Stack.Navigator>
       </SafeAreaView>
     </NavigationContainer>

@@ -11,7 +11,7 @@ function FirstScreen() {
   useEffect(() => {
     setTimeout(() => {
       console.log("Delayed for 1 second");
-      navigation.navigate("OnBoarding", { namee: "Nikhil" }, [navigation]);
+      navigation.navigate("OnBoardingFlow");
     }, 1000);
   }, []);
 
