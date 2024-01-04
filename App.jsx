@@ -4,6 +4,7 @@ import FirstScreen from "./Components/FirstScreen/FirstScreen.jsx";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoardingFlow from "./Components/OnBoarding/OnBoardingFlow.jsx";
+import SignIn from "./Components/SignIn/SignIn.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,14 @@ export default function App() {
             }}
             name="OnBoardingFlow"
             component={OnBoardingFlow}
+          />
+          <Stack.Screen
+            options={{
+              title: "",
+              headerShown: false,
+            }}
+            name="SignIn"
+            component={SignIn}
           />
         </Stack.Navigator>
       </SafeAreaView>

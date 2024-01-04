@@ -17,7 +17,7 @@ const OnboardingFlow = () => {
       setCurrentIndex(currentIndex + 1);
     } else {
       console.log("Directed to the Authentication page");
-      navigation.navigate("login");
+      navigation.navigate("SignIn");
     }
   };
 
