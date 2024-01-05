@@ -7,6 +7,7 @@ import OnBoardingFlow from "./Components/OnBoarding/OnBoardingFlow.jsx";
 import SignIn from "./Components/SignIn/SignIn.jsx";
 import ForgotPassword from "./Components/SignIn/ForgotPassword.jsx";
 import NewPassword from "./Components/SignIn/NewPassword.jsx";
+import Verification from "./Components/SignIn/Verification.jsx";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -59,6 +60,17 @@ export default function App() {
             }}
             name="NewPassword"
             component={NewPassword}
+          />
+          <Stack.Screen
+            options={{
+              title: "Verification",
+              headerTitleAlign: "center",
+              headerBackground: () => (
+                <View style={{ backgroundColor: "#F9FBE7", flex: 1 }} />
+              ),
+            }}
+            name="Verification"
+            component={Verification}
           />
         </Stack.Navigator>
       </SafeAreaView>
