@@ -6,13 +6,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#F9FBE7",
     height: "100%",
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
     color: "#FE9F9F",
   },
   logo: {
-    width: "30%",
-    height: "14%",
+    width: 130,
+    height: 130,
   },
   signInText: {
     color: "#FE9F9F",
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   },
   labelText: {
     fontSize: 20,
-    marginBottom: "4%",
+    marginBottom: "2%",
     color: "#FE9F9F",
   },
   input: {
@@ -35,6 +36,7 @@ const styles = StyleSheet.create({
     height: "14%",
     borderRadius: 10,
     borderWidth: 2,
+    fontSize: 20,
   },
   rememberMeContainer: {
     width: "34%",
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
   connectWith: {
     // backgroundColor: "red",
     alignSelf: "center",
-    marginTop: "3%",
+
     fontSize: 20,
   },
 });
