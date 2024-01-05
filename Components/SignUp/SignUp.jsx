@@ -2,36 +2,27 @@ import React, { useState } from "react";
 import { View, Image, TouchableOpacity, Text, TextInput } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { useNavigation } from "@react-navigation/native";
-import styles from "./SignIn.js";
+import styles from "./SignUp.js";
 import SignInImage from "../../assets/signIn.png";
 
 import facebook from "../../assets/facebook.png";
 import twitter from "../../assets/twitter.png";
 import google from "../../assets/google.png";
 import apple from "../../assets/apple-logo.png";
-function SignIn() {
+function SignUp() {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleForgotPassword = () => {
-    console.log("Redirect to the forgot password");
-    navigation.navigate("ForgotPassword");
-  };
-  const handleSignIn = () => {
-    console.log("User Directed to the main page");
-    navigation.navigate("HomeScreen");
-  };
-
   const handleSignUp = () => {
-    console.log("User directed to SignUp page");
-    navigation.navigate("SignUp");
+    console.log("User directed to Mobile Verification");
+    navigation.navigate("MobileVerification");
   };
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={SignInImage}></Image>
-      <Text style={styles.signInText}>Sign In</Text>
+      <Text style={styles.signUpText}>Sign up</Text>
 
       <View style={styles.formArea}>
         <Text style={styles.labelText}>Email</Text>
@@ -50,22 +41,8 @@ function SignIn() {
           onChangeText={(text) => setPassword(text)}
         />
 
-        <View style={styles.otherOptions}>
-          <View style={styles.rememberMeContainer}>
-            <BouncyCheckbox
-              onPress={() => {
-                setIsChecked(!isChecked);
-              }}
-            />
-            <Text>Remember me</Text>
-          </View>
-          <TouchableOpacity onPress={handleForgotPassword}>
-            <Text>Forgot Password ?</Text>
-          </TouchableOpacity>
-        </View>
-
-        <TouchableOpacity style={styles.submitButton}>
-          <Text>Sign In</Text>
+        <TouchableOpacity onPress={handleSignUp} style={styles.submitButton}>
+          <Text>Sign up</Text>
         </TouchableOpacity>
 
         <View>
@@ -85,16 +62,10 @@ function SignIn() {
               <Image style={styles.mediaLogo} source={apple}></Image>
             </TouchableOpacity>
           </View>
-          <View style={styles.noAccount}>
-            <Text>Do not have an account ? </Text>
-            <TouchableOpacity onPress={handleSignUp}>
-              <Text>sign Up</Text>
-            </TouchableOpacity>
-          </View>
         </View>
       </View>
     </View>
   );
 }
 
-export default SignIn;
+export default SignUp;

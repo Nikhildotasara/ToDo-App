@@ -8,6 +8,10 @@ import SignIn from "./Components/SignIn/SignIn.jsx";
 import ForgotPassword from "./Components/SignIn/ForgotPassword.jsx";
 import NewPassword from "./Components/SignIn/NewPassword.jsx";
 import Verification from "./Components/SignIn/Verification.jsx";
+import SignUp from "./Components/SignUp/SignUp.jsx";
+import MobileVerification from "./Components/SignUp/MobileVerification.jsx";
+import MobileOTPVerification from "./Components/SignUp/MobileOTPVerification.jsx";
+import ProfileCreation from "./Components/ProfileCreation/ProfileCreation.jsx";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -71,6 +75,47 @@ export default function App() {
             }}
             name="Verification"
             component={Verification}
+          />
+          <Stack.Screen
+            options={{
+              headerTitleAlign: "center",
+              headerShown: false,
+            }}
+            name="SignUp"
+            component={SignUp}
+          />
+          <Stack.Screen
+            options={{
+              title: "Verification",
+              headerTitleAlign: "center",
+              headerBackground: () => (
+                <View style={{ backgroundColor: "#F9FBE7", flex: 1 }} />
+              ),
+            }}
+            name="MobileVerification"
+            component={MobileVerification}
+          />
+          <Stack.Screen
+            options={{
+              title: "Verification",
+              headerTitleAlign: "center",
+              headerBackground: () => (
+                <View style={{ backgroundColor: "#F9FBE7", flex: 1 }} />
+              ),
+            }}
+            name="MobileOTPVerification"
+            component={MobileOTPVerification}
+          />
+          <Stack.Screen
+            options={{
+              title: "Profile Creation",
+              headerTitleAlign: "center",
+              headerBackground: () => (
+                <View style={{ backgroundColor: "#F9FBE7", flex: 1 }} />
+              ),
+            }}
+            name="ProfileCreation"
+            component={ProfileCreation}
           />
         </Stack.Navigator>
       </SafeAreaView>
