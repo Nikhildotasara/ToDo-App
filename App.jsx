@@ -108,7 +108,7 @@ export default function App() {
           />
           <Stack.Screen
             options={{
-              title: "Profile",
+              title: "Profile Creation",
               headerTitleAlign: "center",
               headerBackground: () => (
                 <View style={{ backgroundColor: "#F9FBE7", flex: 1 }} />
